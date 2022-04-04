@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Count from "./comps/Count";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -30,11 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
-        {number.name} : {number.count}
-      </h1>
-      <button onClick={add}>Add</button>
-      <button onClick={subtract}>Subtract</button>
+      <Count count={number} add={add} subtract={subtract} />
     </div>
   );
 }
